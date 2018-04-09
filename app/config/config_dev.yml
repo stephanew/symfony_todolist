@@ -42,8 +42,8 @@ monolog:
 swiftmailer:
       transport:  '%mailer_transport%'
       host:       '%mailer_host%'
-      port:       465 # different ports are available, see SES console
-      encryption: ssl # TLS encryption is required
+      port:       '%mailer_port%' # different ports are available, see SES console
+      encryption: '%mailer_encryption%' # TLS encryption is required
       username:   '%mailer_user%'  # to be created in the SES console
       password:   '%mailer_password%'  # to be created in the SES console 授权码
 

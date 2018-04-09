@@ -18,7 +18,6 @@ use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 
 class CallRemindCommand extends ContainerAwareCommand
 {
-    protected $retry = 0;
     protected function configure()
     {
         $this

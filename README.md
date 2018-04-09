@@ -1,6 +1,9 @@
 # symfony_todolist
+db and mail configuration in  parameters.yml
 
-# crontab works every minute:  * * * * * php /pathtoyourproj/bin/console app:call-remind 
+todolist indexpage route: /data
+# crontab works every minute:  
+* * * * * php /pathtoyourproj/bin/console app:call-remind 
 
 # sql
 /*

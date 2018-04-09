@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Todo list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Content</th>
+                <th>RemindTime</th>
+                <th>RemindStatus</th>
+                <th>Createtime</th>
+                <th>Updatetime</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for datum in datas %}
+            <tr>
+                <td><a href="{{ path('data_show', { 'id': datum.id }) }}">{{ datum.id }}</a></td>
+                <td>{{ datum.content }}</td>
+                <td>{{ datum.sendTime }}</td>
+                <td>{{ datum.sendStatus }}</td>
+                <td>{{ datum.createTime }}</td>
+                <td>{{ datum.updateTime }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <button><a href="{{ path('data_show', { 'id': datum.id }) }}" style="text-decoration:none">show</a></button>
+                        </li>
+                        <li>
+                            <button><a href="{{ path('data_edit', { 'id': datum.id }) }}" style="text-decoration:none">edit</a></button>
+                        </li>
+                        <li>
+                            <button><a href="{{ path('mail_new', { 'content_id': datum.id }) }}" style="text-decoration:none">set remind</a></button>
+                        </li>
+
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <button><a href="{{ path('data_new') }}" style="text-decoration:none">Create a new datum</a></button>
+        </li>
+    </ul>
+{% endblock %}

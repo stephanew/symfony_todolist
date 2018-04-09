@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Mail creation</h1>
+
+{% if validateSendTime %}
+        <ul>
+            <li>
+                {{validateSendTime}}
+            </li>
+        </ul>
+        {% endif %}
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <button><a href="{{ path('mail_index') }}" style="text-decoration:none">Back to the list</a></button>
+        </li>
+    </ul>
+{% endblock %}

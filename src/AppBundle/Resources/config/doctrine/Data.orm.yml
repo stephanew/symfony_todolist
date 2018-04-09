@@ -1,0 +1,32 @@
+AppBundle\Entity\Data:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\DataRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        content:
+            type: string
+            length: 255
+        createTime:
+            type: string
+            options:
+                default: 0
+            length: 255
+            column: create_time
+        updateTime:
+            type: string
+            options:
+                default: 0
+            length: 255
+            column: update_time
+        status:
+            type: integer
+            options:
+                default: 1
+
+    lifecycleCallbacks: {  }

@@ -1,0 +1,36 @@
+AppBundle\Entity\mail:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\mailRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        contentId:
+            type: integer
+            column: content_id
+        createTime:
+            type: string
+            length: 255
+            column: create_time
+        updateTime:
+            type: string
+            length: 255
+            column: update_time
+        sendStatus:
+            type: integer
+            column: send_status
+        status:
+            type: integer
+        mailAddress:
+            type: string
+            length: 255
+            column: mail_address
+        sendTime:
+            type: string
+            length: 255
+            column: send_time
+    lifecycleCallbacks: {  }

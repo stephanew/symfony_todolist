@@ -1,0 +1,4 @@
+app_data:
+    resource: "@AppBundle/Resources/config/routing/data.yml"
+    prefix:   /data
+

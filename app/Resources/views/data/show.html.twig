@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Content</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td style="text-align:center">{{ datum.id }}</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td style="text-align:center">{{ datum.content }}</td>
+            </tr>
+            <tr>
+                <th>Createtime</th>
+                <td style="text-align:center">{{ datum.createTime }}</td>
+            </tr>
+            <tr>
+                <th>Updatetime</th>
+                <td style="text-align:center">{{ datum.updateTime }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li style="float:left;display:inline;margin:0px 5px;">
+            <button><a href="{{ path('data_index') }}" style="text-decoration:none">Back to the list</a></button>
+        </li>
+        <li style="float:left;display:inline;margin:0px 5px;">
+            <button><a href="{{ path('data_edit', { 'id': datum.id }) }}" style="text-decoration:none">Edit</a></button>
+        </li>
+        <li style="float:left;display:inline;margin:0px 5px;">
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

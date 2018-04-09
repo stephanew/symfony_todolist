@@ -1,4 +1,7 @@
 # symfony_todolist
+
+# crontab works every minute:  * * * * * php /pathtoyourproj/bin/console app:call-remind 
+
 # sql
 /*
  Navicat Premium Data Transfer

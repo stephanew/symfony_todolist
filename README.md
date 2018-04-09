@@ -3,7 +3,7 @@ db and mail configuration in  parameters.yml
 
 todolist indexpage route: /data
 # crontab works every minute:  
-* * * * * php /pathtoyourproj/bin/console app:call-remind 
+# * * * * * php /pathtoyourproj/bin/console app:call-remind 
 
 # sql
 /*
